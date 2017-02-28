@@ -1,15 +1,15 @@
-//
-//  main.cpp
-//  Paper Calculator Class
-//
-//  Created by Joseph Lyons on 2/27/17.
-//  Copyright © 2017 Joseph Lyons. All rights reserved.
-//
-
 #include <iostream>
+#include "Calculate.hpp"
 
-int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
-    return 0;
+int main()
+{
+    Calculate calculate;
+    
+    calculate.add(15);
+    calculate.multiply(10);
+    calculate.subtract(1);
+    calculate.divide(3);
+    
+    calculate.setStorageA(1938.53);
+    calculate.setStorageA(214);
 }
