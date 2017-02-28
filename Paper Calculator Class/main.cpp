@@ -14,5 +14,8 @@ int main()
     calculate.setStorageA(214);
     calculate.clear();
     
-    
+    calculate.setOperationChosen(4);
+    calculate.setOperandOne(9);
+    calculate.setOperandTwo(4);
+    calculate.performCalculation();
 }

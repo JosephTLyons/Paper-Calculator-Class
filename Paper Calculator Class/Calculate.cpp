@@ -30,16 +30,16 @@ void Calculate::performCalculation()
 {
     switch (operatorChosen)
     {
-        case 1:
+        case addition:
             total = operandOne + operandTwo;
             break;
-        case 2:
+        case subtraction:
             total = operandOne - operandTwo;
             break;
-        case 3:
+        case multiplication:
             total = operandOne * operandTwo;
             break;
-        case 4:
+        case division:
             total = operandOne / operandTwo;
             break;
             // Do nothing
@@ -71,6 +71,16 @@ void Calculate::divide(const double &input)
 }
 
 /**************************************************/
+
+void Calculate::setOperandOne(const double &input)
+{
+    operandOne = input;
+}
+
+void Calculate::setOperandTwo(const double &input)
+{
+    operandTwo = input;
+}
 
 void Calculate::setStorageA(const double &input)
 {

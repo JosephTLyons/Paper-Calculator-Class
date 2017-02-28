@@ -21,7 +21,8 @@ private:
     double operandOne;
     double operandTwo;
     
-    // 0 = no operator, 1 = addition, 2 = subtraction, 3 = multiplication, 4 = division
+    // enum values are related to what operatorChosen will do when those values are stored in it
+    enum{addition = 1, subtraction, multiplication, division};
     int operatorChosen;
     
 public:
@@ -36,6 +37,8 @@ public:
     void multiply(const double &input);
     void divide(const double &input);
     
+    void setOperandOne(const double &input);
+    void setOperandTwo(const double &input);
     void setStorageA(const double &input);
     void setStorageB(const double &input);
     void setOperationChosen(const int &input);
