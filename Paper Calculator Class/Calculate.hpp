@@ -23,6 +23,8 @@ public:
     
     Calculate();
     
+    void clear();
+    
     void add(const double &input);
     void subtract(const double &input);
     void multiply(const double &input);

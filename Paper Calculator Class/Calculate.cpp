@@ -15,6 +15,11 @@ Calculate::Calculate()
     storageB  = 0;
 }
 
+void Calculate::clear()
+{
+    total = 0;
+}
+
 void Calculate::add(const double &input)
 {
     total += input;
