@@ -16,10 +16,10 @@ class Calculate
 private:
     
     double total;
-    double storageA;
-    double storageB;
     double operandOne;
     double operandTwo;
+    double storageA;
+    double storageB;
     
     // enum values are related to what operatorChosen will do when those values are stored in it
     enum{addition = 1, subtraction, multiplication, division};
@@ -29,7 +29,8 @@ public:
     
     Calculate();
     
-    void clear();
+    void basicClear();
+    void advancedClear();
     void performCalculation();
     
     void add(const double &input);

@@ -12,7 +12,7 @@ int main()
     
     calculate.setStorageA(1938.53);
     calculate.setStorageA(214);
-    calculate.clear();
+    calculate.advancedClear();
     
     calculate.setOperationChosen(4);
     calculate.setOperandOne(9);

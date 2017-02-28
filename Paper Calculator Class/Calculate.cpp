@@ -10,20 +10,26 @@
 
 Calculate::Calculate()
 {
-    total          = 0;
-    storageA       = 0;
-    storageB       = 0;
-    operandOne     = 0;
-    operandTwo     = 0;
-    
-    operatorChosen = 0;
+    advancedClear();
 }
 
 /**************************************************/
 
-void Calculate::clear()
+void Calculate::basicClear()
 {
-    total = 0;
+    total          = 0;
+    operandOne     = 0;
+    operandTwo     = 0;
+}
+
+// Used by constructor and when holding down the clear button for 3+ seconds
+void Calculate::advancedClear()
+{
+    basicClear();
+    
+    storageA       = 0;
+    storageB       = 0;
+    operatorChosen = 0;
 }
 
 void Calculate::performCalculation()
