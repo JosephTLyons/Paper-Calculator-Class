@@ -12,4 +12,7 @@ int main()
     
     calculate.setStorageA(1938.53);
     calculate.setStorageA(214);
+    calculate.clear();
+    
+    
 }

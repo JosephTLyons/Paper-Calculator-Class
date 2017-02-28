@@ -18,12 +18,18 @@ private:
     double total;
     double storageA;
     double storageB;
+    double operandOne;
+    double operandTwo;
+    
+    // 0 = no operator, 1 = addition, 2 = subtraction, 3 = multiplication, 4 = division
+    int operatorChosen;
     
 public:
     
     Calculate();
     
     void clear();
+    void performCalculation();
     
     void add(const double &input);
     void subtract(const double &input);
@@ -32,6 +38,7 @@ public:
     
     void setStorageA(const double &input);
     void setStorageB(const double &input);
+    void setOperationChosen(const int &input);
 };
 
 #endif /* Calculate_hpp */
