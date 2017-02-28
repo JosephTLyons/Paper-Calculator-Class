@@ -17,9 +17,12 @@ Calculate::Calculate()
 
 void Calculate::basicClear()
 {
-    total          = 0;
-    operandOne     = 0;
-    operandTwo     = 0;
+    total                         = 0;
+    operandOne                    = 0;
+    operandTwo                    = 0;
+    
+    decimalPointFlag              = false;
+    dividingNumberForDecimalPlace = 1;
 }
 
 // Used by constructor and when holding down the clear button for 3+ seconds
@@ -51,6 +54,24 @@ void Calculate::performCalculation()
             // Do nothing
         default:
             break;
+    }
+}
+
+void Calculate::calculateNumberInput(const int &singleDigitInput)
+{
+    double temporary = singleDigitInput;
+    
+    if(decimalPointFlag == false)
+    {
+        operandOne *= 10;
+        operandOne += temporary;
+    }
+    
+    else
+    {
+        dividingNumberForDecimalPlace *= 10;
+        temporary /= dividingNumberForDecimalPlace;
+        operandOne += temporary;
     }
 }
 
@@ -101,4 +122,9 @@ void Calculate::setStorageB(const double &input)
 void Calculate::setOperationChosen(const int &input)
 {
     operatorChosen = input;
+}
+
+void Calculate::setDecimalPointFlag(const bool &trueOrFalse)
+{
+    decimalPointFlag = trueOrFalse;
 }

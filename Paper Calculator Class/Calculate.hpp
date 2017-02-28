@@ -25,6 +25,9 @@ private:
     enum{addition = 1, subtraction, multiplication, division};
     int operatorChosen;
     
+    bool decimalPointFlag;
+    double dividingNumberForDecimalPlace;
+    
 public:
     
     Calculate();
@@ -32,6 +35,7 @@ public:
     void basicClear();
     void advancedClear();
     void performCalculation();
+    void calculateNumberInput(const int &singleDigitInput);
     
     void add(const double &input);
     void subtract(const double &input);
@@ -43,6 +47,7 @@ public:
     void setStorageA(const double &input);
     void setStorageB(const double &input);
     void setOperationChosen(const int &input);
+    void setDecimalPointFlag(const bool &trueOrFalse);
 };
 
 #endif /* Calculate_hpp */
